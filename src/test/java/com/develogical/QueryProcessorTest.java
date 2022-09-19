@@ -18,6 +18,7 @@ public class QueryProcessorTest {
     @Test
     public void canAddNumbers() throws Exception {
         assertThat(queryProcessor.process("what is 250 plus 500"), containsString("750"));
+        assertThat(queryProcessor.process("what is -100 plus 500"), containsString("400"));
     }
 
     @Test

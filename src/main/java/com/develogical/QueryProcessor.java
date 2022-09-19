@@ -17,7 +17,7 @@ public class QueryProcessor {
         }
 
         if (queryLowerCase.contains("plus")) {
-            Pattern pattern = Pattern.compile("what is (\\d+) plus (\\d+)", Pattern.CASE_INSENSITIVE);
+            Pattern pattern = Pattern.compile("what is (-?\\d+) plus (-?\\d+)", Pattern.CASE_INSENSITIVE);
             Matcher matcher = pattern.matcher(query);
             if (matcher.find()) {
                 int lhs = Integer.parseInt(matcher.group(1));
