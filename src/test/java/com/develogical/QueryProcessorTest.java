@@ -16,6 +16,11 @@ public class QueryProcessorTest {
     }
 
     @Test
+    public void canFindLargest() throws Exception {
+        assertThat(queryProcessor.process("which is largest: 50, 600, 100"), containsString("600"));
+    }
+
+    @Test
     public void canAddNumbers() throws Exception {
         assertThat(queryProcessor.process("what is 250 plus 500"), containsString("750"));
         assertThat(queryProcessor.process("what is -100 plus 500"), containsString("400"));

@@ -1,5 +1,9 @@
 package com.develogical;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -14,6 +18,15 @@ public class QueryProcessor {
         }
         if (queryLowerCase.contains("oneill cruz")) {
             return ".220 batting average";
+        }
+
+        if (queryLowerCase.contains("largest")) {
+            List<String> numberStrings = Arrays.asList(queryLowerCase.split(": ")[1].split(", "));
+            List<Integer> numbers = new ArrayList<>();
+            for (String number : numberStrings) {
+                numbers.add(Integer.parseInt(number));
+            }
+            return Integer.toString(Collections.max(numbers));
         }
 
         if (queryLowerCase.contains("plus")) {
