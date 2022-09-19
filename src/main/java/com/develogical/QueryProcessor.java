@@ -12,8 +12,8 @@ public class QueryProcessor {
         if (queryLowerCase.contains("oneill cruz")) {
             return ".220 batting average";
         }
-        if (queryLowerCase.contains("what is your name")) {
-            return "Your name is Oneill Cruz";
+        if (queryLowerCase.contains("name")) {
+            return "Chris and Michael (after we listened to the instructions)";
         }
         return "";
     }
